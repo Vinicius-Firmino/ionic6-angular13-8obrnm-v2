@@ -1,0 +1,20 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Header</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-input [(ngModel)]="nameTask" label="Add:"></ion-input>
+    </ion-item>
+    <ion-button fill="solid" (click)="add()">Add</ion-button>
+    <ion-list>
+      <ion-item *ngFor="let task of list">
+        <ion-label>{{ task.name }}</ion-label>
+        <ion-button fill="solid" (click)="remove(1)">Remove</ion-button>
+      </ion-item>
+    
+    </ion-list>
+  </ion-content>
+</ion-app>
